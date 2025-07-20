@@ -1,0 +1,34 @@
+{
+  "name": "practice-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "bdd:generate": "npx bddgen",
+    "bdd:test": "npx playwright test .features-gen",
+    "bdd:test:ui": "npx playwright test .features-gen --ui",
+    "bdd:test:trace": "npx playwright test .features-gen --trace on",
+    "bdd:show-report": "npx playwright show-report",
+    "test:bdd": "npx cucumber-js --require-module ts-node/register --config cucumber.js",
+    "test:headed": "playwright test --ui",
+    "test:painter": "playwright test tests/e2e/features/Painter.feature",
+    "test:cucumber": "npx cucumber-js features/**/*.feature",
+    "playwright-test": "npx playwright test --reporter=html,list --workers 1 --headed",
+    "test:birla": "cucumber-js features/birla-opus-login.feature",
+    "test:birla:ui": "npm run bdd:generate && npx playwright test .features-gen --ui",
+    "test:birla:trace": "npm run bdd:generate && npx playwright test .features-gen --trace on",
+    "show-trace": "npx playwright show-trace",
+    "test:painter:retry": "npx cucumber-js tests/features/Painter.feature --require-module ts-node/register --config cucumber.js --retry 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@cucumber/html-formatter": "^21.7.0",
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "@playwright/test": "^1.51.0",
+    "@types/node": "^22.13.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

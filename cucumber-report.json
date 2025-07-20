@@ -1,0 +1,524 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "painter-crud-feature;add-a-new-painter",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Add a new painter",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1526221999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "User login to the site",
+            "match": {
+              "location": "tests\\steps\\CommonLogin.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11728693800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "User navigate to the painter page",
+            "match": {
+              "location": "tests\\steps\\PainterStep.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1129439799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 602039400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "painter-crud-feature;successful-login-with-valid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "Successful login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 960174200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am on the login page",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4011506499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I enter my email \"prachi@adityabirla.com\"",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 85381099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I click the login button",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 156962700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I enter the OTP \"123456\"",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6646083299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click the verify OTP button",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 156728799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should be logged in successfully",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1155283099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 810219700
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "painter-crud-feature;successful-login-with-valid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 20,
+        "name": "Successful login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1165620500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am on the login page",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4548368599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I enter my email \"user2@example.com\"",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60989100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I click the login button",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 93702098
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I enter the OTP \"654321\"",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:18"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 50316459198,
+              "error_message": "locator.waitFor: Timeout 50000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('verify_otp_code') to be visible\u001b[22m\n\n    at LoginPage.enterOTP (D:\\Practice Playwright\\tests\\pages\\LoginPage.ts:32:29)\n    at World.<anonymous> (D:\\Practice Playwright\\tests\\steps\\LoginStep.ts:19:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click the verify OTP button",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:22"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should be logged in successfully",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:26"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 955942999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "painter-crud-feature",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Painter CRUD Feature",
+    "tags": [],
+    "uri": "tests\\features\\Painter.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-functionality;successful-login-with-valid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 12,
+        "name": "Successful login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1527223300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the login page",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4323655199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I enter my email \"prachi@adityabirla.com\"",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 287394600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I click the login button",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 171193700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I enter the OTP \"123456\"",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6287294899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I click the verify OTP button",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 184043998
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should be logged in successfully",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 861767699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 657247900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;successful-login-with-valid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 13,
+        "name": "Successful login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 815461099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the login page",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3831757398
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I enter my email \"user2@example.com\"",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65682400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I click the login button",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 88503399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I enter the OTP \"654321\"",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:18"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 50280083098,
+              "error_message": "locator.waitFor: Timeout 50000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('verify_otp_code') to be visible\u001b[22m\n\n    at LoginPage.enterOTP (D:\\Practice Playwright\\tests\\pages\\LoginPage.ts:32:29)\n    at World.<anonymous> (D:\\Practice Playwright\\tests\\steps\\LoginStep.ts:19:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I click the verify OTP button",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:22"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should be logged in successfully",
+            "match": {
+              "location": "tests\\steps\\LoginStep.ts:26"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1030666499
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login Functionality",
+    "tags": [],
+    "uri": "tests\\features\\login.feature"
+  }
+]
